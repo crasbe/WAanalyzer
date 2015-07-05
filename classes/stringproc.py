@@ -89,7 +89,7 @@ class StringProc:
         
         msgWithSender = line[len(dateTimeStr)::]
         
-        senderre = re.compile("^(([\wäöüÄÜÖ()]+[\s\-]?[\wäöüÄÜÖ()]*[\s\-]?[\wäöüÄÜÖ()]*[\s\-]?[\wäöüÄÜÖ()]*((\shat\s)|\:\s))|(\+\d{2}\s\d{3,4}\s\d+((\shat\s)|\:\s))|(Du hast ))")
+        senderre = re.compile("^(([\wäöüÄÜÖ()]+[\s\-]?[\wäöüÄÜÖ()]*[\s\-]?[\wäöüÄÜÖ()]*[\s\-]?[\wäöüÄÜÖ()]*((\shat\s)|\:\s|\swurde\s))|(\+\d{2}\s\d{3,4}\s\d+((\shat\s)|\:\s))|(Du hast ))")
         
         sender = senderre.match(msgWithSender)
         if sender == None:
